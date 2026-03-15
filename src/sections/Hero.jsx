@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { FiArrowRight, FiArrowUp } from 'react-icons/fi'
-import heroImg from '../assets/mon image.png'
 import './Hero.css'
 
 const stats = [
@@ -106,7 +105,7 @@ export default function Hero() {
         <div className="hero__visual">
           <div className="hero__image-wrapper">
             <div className="hero__image-inner-glow"></div>
-            <img src={heroImg} alt="Graphisme technologique e-link" className="hero__main-img" />
+            <img src="/assets/images/hero-services.jpg" alt="Graphisme technologique e-link" className="hero__main-img" />
             <div className="hero__image-overlay"></div>
             
             {/* Floating UI Tags - Enhanced */}
