@@ -1,0 +1,127 @@
+.stats {
+  padding: 120px 0;
+  background: #0f1218;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.stats__content .section-eyebrow {
+  justify-content: flex-start;
+}
+
+.stats__content .section-title,
+.stats__content .section-sub {
+  text-align: left;
+  margin-left: 0;
+}
+
+.stats__counters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.stat-card__icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--accent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-card__value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+
+.stat-card__label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ─── CHART VISUAL ───────────────────────────────────────────── */
+.stats__visual {
+  position: relative;
+}
+
+.stats__chart-container {
+  background: #161a21;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 32px;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.stats__chart-container::before {
+  content: '';
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 100px; height: 100px;
+  background: var(--gradient-sunset);
+  filter: blur(80px);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.stats__chart-header {
+  margin-bottom: 32px;
+}
+
+.stats__chart-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stats__chart-header p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 1100px) {
+  .stats__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats__counters {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,148 @@
+import { Link } from 'react-router-dom'
+import { FiArrowRight, FiCheckCircle } from 'react-icons/fi'
+import './AboutPage.css'
+
+const teamMembers = [
+  {
+    name: "Ousmane Kanté",
+    role: "Fondateur & CEO",
+    bio: <>Ex-Directeur Technique chez un acteur majeur du cloud européen, Ousmane a fondé <span className="e-logo">e</span>-link avec la vision de démocratiser les architectures cloud-natives en Afrique de l'Ouest.</>,
+    image: "/assets/images/team-ceo.jpg"
+  },
+  {
+    name: "Fatoumata Diabaté",
+    role: "Directrice Cybersécurité",
+    bio: "Experte reconnue en sécurité offensive (OSCP), Fatoumata dirige le pôle SecOps pour garantir que chaque ligne de code produite est robuste face aux menaces.",
+    image: "/assets/images/team-cyber.jpg"
+  },
+  {
+    name: "Jean-Marc Sery",
+    role: "Lead Architect Cloud",
+    bio: "Spécialiste certifié AWS/GCP, Jean-Marc orchestre les migrations complexes et s'assure que les infrastructures de nos clients scalent sans compromis.",
+    image: "/assets/images/team-cloud.jpg"
+  },
+  {
+    name: "Sarah Koné",
+    role: "Head of AI & Data",
+    bio: "Docteure en Machine Learning, Sarah aide les entreprises à débloquer la valeur cachée dans leurs données via des modèles prédictifs innovants.",
+    image: "/assets/images/team-ai.jpg"
+  }
+]
+
+export default function AboutPage() {
+  return (
+    <div className="about-page">
+      <div className="container">
+        {/* Hero Section */}
+        <header className="about-hero">
+          <div className="about-hero__content">
+            <p className="section-eyebrow" style={{ color: 'rgba(255,255,255,0.7)' }}>Notre Vocation</p>
+            <h1 className="section-title" style={{ color: 'white', marginBottom: '24px' }}>Nous sommes les <span className="gradient-text">Architectes</span> de votre avenir numérique.</h1>
+            <p className="section-sub" style={{ color: 'rgba(255,255,255,0.8)' }}>
+              Chez <span className="e-logo">e</span>-link, nous ne nous contentons pas d'écrire du code. Nous forgeons l'infrastructure sur laquelle reposent les entreprises innovantes de demain.
+            </p>
+          </div>
+        </header>
+
+        {/* Our Story */}
+        <section className="about-story">
+          <div className="story-grid">
+            <div className="story-content">
+              <h2 className="section-title">Notre <span className="gradient-text">Histoire</span></h2>
+              <p className="story-text">
+                Fondée en 2020 avec la conviction que la technologie doit être un levier de croissance stratégique et non un centre de coût, <span className="e-logo">e</span>-link est née pour combler le vide entre les besoins métier complexes et l'ingénierie logicielle de pointe.
+              </p>
+              <p className="story-text">
+                Nous avons commencé comme une petite équipe d'experts DevOps passionnés par l'automatisation. Aujourd'hui, we sommes le partenaire de confiance des grandes institutions financières, des ministères et des start-ups en hyper-croissance pour la modernisation de leur Système d'Information.
+              </p>
+              <div className="story-stats">
+                <div className="story-stat-item">
+                  <span className="stat-number">+50</span>
+                  <span className="stat-label">Projets d'envergure livrés</span>
+                </div>
+                <div className="story-stat-item">
+                  <span className="stat-number">99.9%</span>
+                  <span className="stat-label">Uptime sur nos plateformes</span>
+                </div>
+              </div>
+            </div>
+            <div className="story-visual">
+              <div className="story-box">
+                <img src="/assets/images/about-story.jpg" alt="Consultation technologique" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Values */}
+        <section className="about-values">
+          <div className="text-center" style={{ marginBottom: '60px' }}>
+            <p className="section-eyebrow">Ce qui nous guide</p>
+            <h2 className="section-title">Nos Valeurs <span className="gradient-text">Fondamentales</span></h2>
+          </div>
+          
+          <div className="values-grid">
+            <div className="value-card">
+              <div className="value-icon"><FiCheckCircle /></div>
+              <h3>Excellence Technique</h3>
+              <p>Nous ne faisons aucun compromis sur la qualité du code, l'architecture et la sécurité. Chaque livraison doit répondre aux plus hauts standards industriels.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon"><FiCheckCircle /></div>
+              <h3>Agilité Radicale</h3>
+              <p>Dans un monde technologique évoluant à une vitesse vertigineuse, nous restons souples et réactifs pour adapter nos solutions aux pivots de nos clients.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon"><FiCheckCircle /></div>
+              <h3>Transparence</h3>
+              <p>Pas de jargon inutile ou de boîtes noires. Nos clients sont impliqués à chaque étape et ont une visibilité totale sur l'avancement et l'état de l'infrastructure.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon"><FiCheckCircle /></div>
+              <h3>Impact Durable</h3>
+              <p>Nous concevons des architectures pérennes et frugales en ressources (Green IT) capables d'encaisser la croissance sans exploser les coûts d'exploitation.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="about-team">
+          <div className="text-center" style={{ marginBottom: '80px' }}>
+            <p className="section-eyebrow">Les talents derrière le code</p>
+            <h2 className="section-title">Notre <span className="gradient-text">Leadership</span></h2>
+          </div>
+
+          <div className="team-grid">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="team-card">
+                <div className="team-card__image">
+                  <img src={member.image} alt={member.name} />
+                  <div className="team-card__overlay">
+                    <span className="team-role">{member.role}</span>
+                  </div>
+                </div>
+                <div className="team-card__content">
+                  <h3 className="team-name">{member.name}</h3>
+                  <p className="team-bio">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="about-cta">
+          <div className="cta-content">
+            <h2 className="section-title" style={{ color: 'white' }}>Prêt à transformer <span className="gradient-text">votre vision en réalité ?</span></h2>
+            <p style={{ opacity: 0.8, maxWidth: '600px', margin: '0 auto 30px' }}>
+              Rencontrez nos experts pour un premier diagnostic sans engagement de votre infrastructure ou de votre projet applicatif.
+            </p>
+            <Link to="/contact" className="btn btn--primary">
+              Prendre rendez-vous <FiArrowRight />
+            </Link>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}

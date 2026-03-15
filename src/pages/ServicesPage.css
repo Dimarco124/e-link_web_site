@@ -1,0 +1,33 @@
+/* Services Page Specific Styles */
+.services-page {
+  padding-top: 140px;
+  background: var(--bg);
+}
+.services-hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                    url('/assets/images/hero-services.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 180px 0 120px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.services-hero__content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hide the section header in the embedded Services section when on the Services Page */
+.services-page .section-header {
+    display: none;
+}
+
+.services-page .services {
+    padding-top: 0;
+}

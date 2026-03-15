@@ -1,0 +1,360 @@
+.contact-page {
+  padding-top: 140px;
+  background: var(--bg);
+}
+
+/* ─── HERO ─────────────────────────────────────────────── */
+.contact-hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                    url('/assets/images/hero-contact.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 180px 0 120px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.contact-hero__content {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ─── MAIN CONTENT ────────────────────────────────────── */
+.contact-main {
+  margin: 0 0 100px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ─── LEFT PANEL (INFO) ───────────────────────────────── */
+.contact-info-panel {
+  padding-right: 20px;
+}
+
+.info-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+}
+
+.info-desc {
+  color: var(--charcoal-light);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+.info-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.info-block {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--coral);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.info-block:hover .info-icon {
+  background: var(--coral);
+  color: white;
+  border-color: var(--coral);
+}
+
+.info-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.info-content p {
+  color: var(--charcoal-light);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.info-content a {
+  color: var(--charcoal-light);
+  transition: color 0.2s;
+}
+
+.info-content a:hover {
+  color: var(--coral);
+}
+
+.info-alert {
+  background: rgba(255, 140, 105, 0.05);
+  border: 1px solid rgba(255, 140, 105, 0.2);
+  border-left: 4px solid var(--coral);
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.info-alert-icon {
+  color: var(--coral);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.info-alert p {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* ─── RIGHT PANEL (FORM) ──────────────────────────────── */
+.contact-form-panel {
+  background: white;
+  padding: 50px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.form-header {
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+}
+
+.form-header h2 {
+  font-size: 1.5rem;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+}
+
+.form-header p {
+  font-size: 0.9rem;
+  color: var(--charcoal-muted);
+}
+
+.premium-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.premium-form .form-row .form-group {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Ensure no border-radius anywhere */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--coral);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(255, 140, 105, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+
+.secure-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--charcoal-muted);
+  font-weight: 600;
+}
+
+.secure-badge svg {
+  color: #10B981; /* green */
+}
+
+/* Form Success State */
+.form-success-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: #10B981;
+  margin-bottom: 20px;
+}
+
+.form-success-state h3 {
+  font-size: 1.8rem;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.form-success-state p {
+  color: var(--charcoal-light);
+  font-size: 1.1rem;
+}
+
+/* ─── FAQ SECTION ────────────────────────────────lllllll */
+.faq-section {
+  background: white;
+  border-top: 1px solid var(--border);
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(255, 140, 105, 0.3);
+}
+
+.faq-icon {
+  color: var(--coral);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.faq-question {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.faq-answer {
+  color: var(--charcoal-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contact-info-panel {
+    padding-right: 0;
+  }
+  
+  .premium-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 0;
+  }
+  
+  .premium-form .form-row .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form-panel {
+    padding: 30px 20px;
+  }
+  
+  .form-submit-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .faq-card {
+    padding: 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

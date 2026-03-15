@@ -1,0 +1,186 @@
+.training-page {
+  padding-top: 140px;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* Training Hero */
+.training-hero {
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                    url('/assets/images/hero-training.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 180px 0 120px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+
+.training-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.15), transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(0, 163, 255, 0.1), transparent 40%);
+  pointer-events: none;
+}
+
+.training-hero__content {
+  max-width: 800px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Detailed Training Tracks */
+.track-detail {
+  padding: 0 0 120px;
+}
+
+.track-detail--alt {
+  background-color: var(--light-bg, #f8f9fa);
+}
+
+.track-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.track-detail--alt .track-grid {
+  direction: rtl; /* Flip content/visual on desktop */
+}
+
+.track-detail--alt .track-content {
+  direction: ltr;
+}
+
+.track-visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+  background: #000;
+}
+
+.track-visual video,
+.track-visual img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.track-visual:hover video,
+.track-visual:hover img {
+  transform: scale(1.03);
+}
+
+.track-content {
+  max-width: 550px;
+}
+
+.curriculum-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.curriculum-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.curriculum-list li svg {
+  color: #dc2626;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.curriculum-list li strong {
+  display: block;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.track-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: rgba(220, 38, 38, 0.05);
+  color: #dc2626;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+
+.track-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* Training CTA */
+.training-cta {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+}
+
+.cta-box {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .track-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .track-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .track-detail--alt .track-grid {
+    direction: ltr;
+  }
+  
+  .track-visual {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .track-content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-hero {
+    padding: 120px 0 60px;
+  }
+  
+  .track-detail {
+    padding: 80px 0;
+  }
+}
